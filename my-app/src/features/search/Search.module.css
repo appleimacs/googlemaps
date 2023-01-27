@@ -1,0 +1,30 @@
+.search {
+    width: 327px;
+    height: 32px;
+    padding-left: 36px;
+    background: #efefec center left 13.5px/13px 13px no-repeat url('../../../public/search.svg') !important;
+    border-radius: 40px;
+    border:none;
+}
+  
+@media only screen and (min-width: 961px) {
+    .search {    
+        position:absolute;
+        right: 24px;
+        top: 15px;
+    }
+  }
+  
+@media only screen and (max-width: 960px) {
+    .search {
+        position:relative;
+        top: 15px;
+        margin-bottom: 15px;
+    }
+    div:has(> .search) {
+        flex: 1 1 auto;
+        position:relative;
+        top: 20px;
+
+    }
+}

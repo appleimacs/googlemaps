@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  position: absolute;
+  width: 223.95px;
+  height: 24px;
+}
+
+.App-header {
+  display: flex;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: calc(100vh-64px);
+  display: flex;
+
+}
+
+.view-button {
+  position: absolute;
+  height: 48px;
+  background: #2C5601;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  border-style: solid;
+  border: 1px;
+  padding: 12px 24px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  bottom: 24px;
+  color: #ffffff
+}
+
+@media only screen and (min-width: 961px) {
+  .App-header {
+    height: 64px;
+    flex-direction: row;
+    align-items: initial;
+  }
+  .App-logo {
+    top: 20px;
+    flex: 1 1 auto;
+    position: absolute;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .App-header {
+    height: 110px;
+    flex-direction:column;
+    align-items: center;
+  }
+  .App-logo {
+    top: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+button > img {
+  margin-right: 12px;
+}
+
+button > span {
+  vertical-align: super;
+}
