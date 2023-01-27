@@ -1,12 +1,10 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/map/counterSlice';
 import resultReducer from './reducers/resultSlice';
 import selectedReducer from './reducers/selectedSlice';
 import favReducer from './reducers/favSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     results: resultReducer,
     selected: selectedReducer,
     favs: favReducer,
