@@ -1,21 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { fetchResults } from '../searchAPI';
+import { ResultType, LocationType } from '../../Globals';
 
-export interface Location {
-  lat: number;
-  lng: number
-}
-
-export interface ResultState {
-  values: any[];
-  filter: string;
-  center: Location;
-  map: any;
-  status: 'idle' | 'loading' | 'failed';
-}
-
-const initialState: ResultState = {
+const initialState: ResultType = {
   values: [],
   filter: "",
   center: {lat:47.6062,lng:-122.3321},
@@ -25,7 +13,7 @@ const initialState: ResultState = {
 
 export const getResults = createAsyncThunk(
   'results/fetchResults',
-  async (params:{center: Location, filter: string}) => {
+  async (params:{center: LocationType, filter: string}) => {
     const { filter, center } = params;
     const response = await fetchResults(filter, center);
     return response;

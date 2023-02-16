@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
+import { FavType } from '../../Globals';
 
-export interface FavState {
-  values: string[];
-}
-
-const initialState: FavState = {
+const initialState: FavType = {
   values: [],
 };
 
@@ -17,7 +14,6 @@ export const favSlice = createSlice({
   name: 'favs',
   initialState,
   reducers: {
-  
     deleteFav: (state, action)=>{
       const { id } = action.payload;
 

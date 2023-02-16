@@ -1,16 +1,7 @@
 import styles from './Restaurant.module.css';
 import { useAppDispatch, useAppSelector  } from '../../app/hooks';
 import { deleteFav, insertFav, selectFavs } from '../../app/reducers/favSlice';
-
-export interface RestaurantType {
-    name: string, 
-    editorial_summary: string, 
-    geometry: {location:google.maps.LatLng}, 
-    photo: string, 
-    rating:number, 
-    reference:string, 
-    user_ratings_total: number
-}
+import { RestaurantType } from '../../Globals';
 
 const Restaurant = ({
         name,

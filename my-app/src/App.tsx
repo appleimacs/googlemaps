@@ -20,8 +20,10 @@ function App() {
   const center = useAppSelector(selectCenter);
   const filter = useAppSelector(selectFilter);
   const { width } = useWindowDimensions();
+
   const [screenSize, setScreenSize] = useState(SCREEN.DESKTOP)
   const [viewMode, setViewMode] = useState(VIEW_MODE.MAP)
+
   const showList = (screenSize === SCREEN.DESKTOP || viewMode === VIEW_MODE.LIST) ? true : false; 
   const showMap = (screenSize === SCREEN.DESKTOP || viewMode === VIEW_MODE.MAP) ? true : false;
   const showButton = screenSize === SCREEN.MOBILE ? true : false;
@@ -49,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="logo.svg" className={"App-logo"} alt="logo" />
+        <img src="logo192.png" width="auto" height="24px" className={"App-logo1"} alt="logo" />
         <Search />
       </header>
       <div className='wrapper'>

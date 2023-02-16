@@ -1,11 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
+import { SelectedType } from '../../Globals';
 
-export interface SelectedState {
-  value: string;
-}
-
-const initialState: SelectedState = {
+const initialState: SelectedType = {
   value: "",
 };
 
