@@ -22,7 +22,7 @@ const Map = () => {
     dispatch(getResults({filter: filter, center: center}))
   }
   
-  const { isLoaded } = useLoadScript({googleMapsApiKey:"AIzaSyCqWHKkgLxJiSwS63bxfWpQ-XhSQs65H5c"});
+  const { isLoaded } = useLoadScript({googleMapsApiKey:"INSERT_YOUR_GOOGLE_MAP_KEY"});
   
   if (!isLoaded) {return <div>Loading...</div>} ;
 
